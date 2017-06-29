@@ -1,0 +1,25 @@
+{
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [{
+    "all_frames": true,
+    "js": ["content.js"],
+    "run_at": "document_end",
+    "matches": [
+      "*://*.google.com.tw/*"
+    ]
+  }],
+  "browser_action": {
+    "default_title": "test",
+    "default_popup": "popup.html"
+  },
+  "description": "創科",
+  "name": "extension sample",
+  "omnibox": {
+    "keyword": "asd"
+  },
+  "permissions": ["*://www.google.com/", "system.storage", "system.cpu", "tts"],
+  "version": "0.1.0",
+  "manifest_version": 2
+}
